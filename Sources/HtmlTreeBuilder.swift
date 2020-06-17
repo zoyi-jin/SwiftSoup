@@ -15,23 +15,16 @@ class HtmlTreeBuilder: TreeBuilder {
     
     private enum TagSets {
         // tag searches
-        static let inScope =  ["applet", "caption", "html", "table", "td", "th", "marquee", "object"]
-        static let list = ["ol", "ul"]
-        static let button = ["button"]
-        static let tableScope = ["html", "table"]
-        static let selectScope = ["optgroup", "option"]
-        static let endTags = ["dd", "dt", "li", "option", "optgroup", "p", "rp", "rt"]
-        static let titleTextarea = ["title", "textarea"]
-        static let frames = ["iframe", "noembed", "noframes", "style", "xmp"]
+        static let inScope: [String] = []
+        static let list: [String] = []
+        static let button: [String] = []
+        static let tableScope: [String] = []
+        static let selectScope: [String] = []
+        static let endTags: [String] = []
+        static let titleTextarea: [String] = []
+        static let frames: [String] = []
         
-        static let special: Set<String> = ["address", "applet", "area", "article", "aside", "base", "basefont", "bgsound",
-                              "blockquote", "body", "br", "button", "caption", "center", "col", "colgroup", "command", "dd",
-                              "details", "dir", "div", "dl", "dt", "embed", "fieldset", "figcaption", "figure", "footer", "form",
-                              "frame", "frameset", "h1", "h2", "h3", "h4", "h5", "h6", "head", "header", "hgroup", "hr", "html",
-                              "iframe", "img", "input", "isindex", "li", "link", "listing", "marquee", "menu", "meta", "nav",
-                              "noembed", "noframes", "noscript", "object", "ol", "p", "param", "plaintext", "pre", "script",
-                              "section", "select", "style", "summary", "table", "tbody", "td", "textarea", "tfoot", "th", "thead",
-                              "title", "tr", "ul", "wbr", "xmp"]
+        static let special: Set<String> = []
     }
 
     private var _state: HtmlTreeBuilderState = HtmlTreeBuilderState.Initial // the current state

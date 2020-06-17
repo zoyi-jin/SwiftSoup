@@ -258,41 +258,14 @@ open class Tag: Hashable {
 
     // internal static initialisers:
     // prepped from http://www.w3.org/TR/REC-html40/sgml/dtd.html and other sources
-    private static let blockTags: [String] = [
-        "html", "head", "body", "frameset", "script", "noscript", "style", "meta", "link", "title", "frame",
-        "noframes", "section", "nav", "aside", "hgroup", "header", "footer", "p", "h1", "h2", "h3", "h4", "h5", "h6",
-        "ul", "ol", "pre", "div", "blockquote", "hr", "address", "figure", "figcaption", "form", "fieldset", "ins",
-        "del", "s", "dl", "dt", "dd", "li", "table", "caption", "thead", "tfoot", "tbody", "colgroup", "col", "tr", "th",
-        "td", "video", "audio", "canvas", "details", "menu", "plaintext", "template", "article", "main",
-        "svg", "math"
-    ]
-    private static let inlineTags: [String] = [
-        "object", "base", "font", "tt", "i", "b", "u", "big", "small", "em", "strong", "dfn", "code", "samp", "kbd",
-        "var", "cite", "abbr", "time", "acronym", "mark", "ruby", "rt", "rp", "a", "img", "br", "wbr", "map", "q",
-        "sub", "sup", "bdo", "iframe", "embed", "span", "input", "select", "textarea", "label", "button", "optgroup",
-        "option", "legend", "datalist", "keygen", "output", "progress", "meter", "area", "param", "source", "track",
-        "summary", "command", "device", "area", "basefont", "bgsound", "menuitem", "param", "source", "track",
-        "data", "bdi"
-    ]
-    private static let emptyTags: [String] = [
-        "meta", "link", "base", "frame", "img", "br", "wbr", "embed", "hr", "input", "keygen", "col", "command",
-        "device", "area", "basefont", "bgsound", "menuitem", "param", "source", "track"
-    ]
-    private static let formatAsInlineTags: [String] = [
-        "title", "a", "p", "h1", "h2", "h3", "h4", "h5", "h6", "pre", "address", "li", "th", "td", "script", "style",
-        "ins", "del", "s"
-    ]
-    private static let preserveWhitespaceTags: [String] = [
-        "pre", "plaintext", "title", "textarea"
-        // script is not here as it is a data node, which always preserve whitespace
-    ]
+    private static let blockTags: [String] = []
+    private static let inlineTags: [String] = []
+    private static let emptyTags: [String] = []
+    private static let formatAsInlineTags: [String] = []
+    private static let preserveWhitespaceTags: [String] = []
     // todo: I think we just need submit tags, and can scrub listed
-    private static let formListedTags: [String] = [
-        "button", "fieldset", "input", "keygen", "object", "output", "select", "textarea"
-    ]
-    private static let formSubmitTags: [String] = [
-        "input", "keygen", "object", "select", "textarea"
-    ]
+    private static let formListedTags: [String] = []
+    private static let formSubmitTags: [String] = []
 
     static private func initializeMaps()throws->Dictionary<String, Tag> {
         var dict = Dictionary<String, Tag>()

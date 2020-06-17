@@ -39,7 +39,7 @@ extension UnicodeScalar {
 
 		switch self {
 
-		case UnicodeScalar.Space, UnicodeScalar.BackslashT, UnicodeScalar.BackslashN, UnicodeScalar.BackslashR, UnicodeScalar.BackslashF: return true
+		case UnicodeScalar.Space: return true
 
 		case UnicodeScalar.FormFeed, UnicodeScalar.VerticalTab: return true // Form Feed, vertical tab
 
